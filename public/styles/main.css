@@ -553,7 +553,7 @@ a:hover {
   }
 }
 .featured {
-  background-image: url("/public/assets/featured/image 283.png");
+  background-image: url("../../public/assets/featured/image 283.png");
 }
 
 .featured-container {
