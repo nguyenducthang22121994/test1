@@ -1,0 +1,148 @@
+.featured {
+  background-image: url("../../../public/assets/featured/image\ 283.png");
+}
+
+.featured-container {
+  padding: 68px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 47.72%;
+  height: 100%;
+}
+
+.featured__title {
+  max-width: 523px;
+  max-height: 165px;
+  color: #fff;
+  font-family: "be vietnam pro";
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 92%;
+  letter-spacing: -3px;
+}
+
+.f-card {
+  max-width: 511px;
+  height: auto;
+}
+
+.f-card__inner {
+  display: flex;
+  padding: 18px;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+.f-card__image-wrapper {
+  overflow: hidden;
+  padding: 0 16px;
+}
+
+.f-card__image-wrapper img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.f-card__content {
+  padding: 0 3px;
+}
+
+.f-card__content {
+  max-width: 285px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.f-card__title {
+  font-family: "be vietnam pro";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 105%; /* 21px */
+  letter-spacing: -0.2px;
+}
+
+.f-card__description {
+  font-family: "be vietnam pro";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 142%; /* 21.3px */
+  opacity: 0.6;
+}
+
+.f-card__prices {
+  display: flex;
+  gap: 4px;
+  font-family: "be vietnam pro";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 22.4px */
+  letter-spacing: -0.16px;
+}
+
+.f-card__price--old {
+  opacity: 0.6;
+}
+
+.f-card__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(15, 97, 255, 1);
+  border-radius: 6px;
+  align-self: flex-end;
+}
+
+.f-card__button a {
+  padding: 14px;
+}
+
+@media (max-width: 572px) {
+  .featured-container {
+    display: block;
+    max-width: 331px;
+    padding: 42px 0;
+    overflow: hidden;
+  }
+
+  .featured__title {
+    width: 100%;
+    height: 100%;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 98%; /* 39.2px */
+    letter-spacing: -2px;
+    white-space: wrap;
+  }
+  .featured {
+    aspect-ratio: 572/884;
+  }
+  .f-card {
+    align-self: self-end;
+    max-width: 100%;
+  }
+  .f-card__inner {
+    display: block;
+    max-width: 245px;
+    padding: 18px;
+    height: 100%;
+    float: right;
+  }
+  .f-card__image-wrapper {
+    overflow: hidden;
+    padding: 13 40px;
+  }
+  .f-card__button {
+    float: right;
+  }
+}

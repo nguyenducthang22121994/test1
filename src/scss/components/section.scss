@@ -1,0 +1,28 @@
+.page-section {
+  width: 100vw;
+  height: 100%;
+}
+
+.bg-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  max-height: 100vh;
+  aspect-ratio: 16/9;
+  flex-shrink: 1;
+  position: relative;
+}
+
+.bg-color--1 {
+  background-color: #f6f6f6;
+}
+.container-xxl {
+  max-width: 1592px;
+  margin: auto;
+}
+
+// .container-xs {
+//   max-width: 572px;
+//   margin: auto;
+// }
