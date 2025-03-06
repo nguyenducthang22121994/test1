@@ -201,7 +201,7 @@ a:hover {
 }
 
 .hero {
-  background-image: url("/public/assets/hero/image49.png");
+  background-image: url("../../public/assets/hero/image49.png");
 }
 
 .hero-title {
