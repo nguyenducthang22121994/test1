@@ -1,63 +1,76 @@
 .pi-container {
+  width: 100%;
+  height: 100%;
+}
+
+.pi {
   display: flex;
+
   width: 100%;
   height: 100%;
   padding: 55px 0 64px 0;
 }
 
-.pi-cont__imgs {
+.pi__gallery {
   flex: 57.6%;
-  //   background-color: lightgray;
+  height: fit-content;
 }
 
-.pi-cont__info {
+.pi__info {
   flex: 42.4%;
-  // background-color: lightblue;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
 }
 
-.pi-cont__imgs,
-.pi-cont__img,
-.pi-cont__thumbnails,
-.pi-cont__info {
+.pi__gallery-main,
+.pi__gallery-main-img,
+.pi__info {
   width: 100%;
   height: 100%;
 }
 
-.pi-thumbnails {
+.pi__gallery-main-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+}
+.pi__gallery-thumbnails {
   display: flex;
   gap: 12px;
+  padding: 55px 0 64px 0;
 }
 
-.pi-thumnail {
+.pi__gallery-thumbnail {
   width: 107px;
   height: 107px;
   border-radius: 10px;
   background: #d9d9d9;
 }
 
-.pi-thumnail:hover {
+.pi__gallery-thumbnail:hover {
   cursor: pointer;
 }
 
-.pi-wrapper {
+.pi__info {
   width: 100%;
-  height: 100%;
+  height: fit-content;
   padding: 80px 0 72px 80px;
 }
 
-.pi-main {
+.pi__content {
   display: flex;
   flex-direction: column;
   gap: 32px;
 }
 
-.pi-text {
+.pi__details {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.pi-main__subtitle {
+.pi__category {
   font-family: Poppins;
   font-size: 15px;
   font-style: normal;
@@ -66,7 +79,7 @@
   opacity: 0.5;
 }
 
-.pi-main__title {
+.pi__title {
   font-family: var(--Heading-font-family, "be vietnam pro");
   font-size: var(--Heading-font-size-H4, 50px);
   font-style: normal;
@@ -75,7 +88,7 @@
   letter-spacing: -2.5px;
 }
 
-.pi-main__desc {
+.pi__description {
   max-width: 473px;
   color: var(--Text, #1e1e1e);
   font-family: var(--Body-font-family, "be vietnam pro");
@@ -86,14 +99,13 @@
   opacity: 0.7;
 }
 
-.pi-main__price {
+.pi__price {
   display: flex;
   align-items: center;
-
   gap: 4px;
 }
 
-.pi-main__price-value--new {
+.pi__price-new {
   color: var(--Text, #1e1e1e);
   font-family: Poppins;
   font-size: 20px;
@@ -104,7 +116,7 @@
   overflow: hidden;
 }
 
-.pi-main__price-value--old {
+.pi__price-old {
   color: var(--Text, #1e1e1e);
   font-family: "Be Vietnam Pro";
   font-size: 14px;
@@ -117,7 +129,12 @@
   opacity: 0.7;
 }
 
-.pi-select label {
+.pi__options {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.pi__option-label {
   color: var(--Text, #1e1e1e);
   font-family: Poppins;
   font-size: 14px;
@@ -125,132 +142,135 @@
   font-weight: 500;
   line-height: 140%;
   opacity: 0.5;
+  margin-bottom: 8px;
 }
 
-.device-select__options {
+.pi__option-wrapper {
   display: flex;
   gap: 6px;
+  align-items: center;
 }
 
-.pi-options__wrapper {
-  display: flex;
-  gap: 6px;
+.pi__option-container {
+  position: relative;
+  max-width: 175px;
+  width: 100%;
 }
 
-.pi-options__select {
-  width: 175px;
-}
-
-.pi-options__dropdown {
+.pi__option-dropdown {
   width: 100%;
   padding: 16px 14px;
   border-radius: 12px;
   border: 1px solid var(--Others-Line-1, #e3e5e8);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 142%;
+  color: var(--Primary-Accent-1, #1e232b);
+  background-color: white;
+  padding-right: 40px;
 }
 
-.pi-options__dropdown option {
+.pi__option-dropdown option {
+  max-width: 100%;
   color: var(--Primary-Accent-1, #1e232b);
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
   font-size: 15px;
-  font-style: normal;
   font-weight: 500;
-  line-height: 142%; /* 21.3px */
+  line-height: 142%;
+}
+
+.pi__option-arrow {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .pi-options__label {
   color: var(--Text, #1e1e1e);
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
   font-size: 14px;
-  font-style: normal;
   font-weight: 500;
   line-height: 140%;
   opacity: 0.5;
 }
 
-.pi-options__colors {
+.pi__colors {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: stretch;
+  gap: 4px;
   border: none;
 }
 
-.pi-options__color {
+.pi__color {
   width: 24px;
   height: 24px;
   overflow: hidden;
 }
 
-.pi-options__color svg {
+.pi__color svg {
   width: 100%;
   height: 100%;
   background-color: white;
 }
 
-.pi-options__color:hover {
+.pi__color:hover {
   cursor: pointer;
 }
 
-.pi-options__color--active {
+.pi__color--active {
   border-radius: 50%;
   border: 1px solid rgba(15, 97, 255, 1);
 }
 
-.pi-options__color--disable {
+.pi__color--disabled {
   border: none;
 }
 
-.pi-buttons {
+.pi__actions {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-.pi-buttons__group {
+.pi__quantity {
   display: flex;
-  width: 444px;
-  gap: 8px;
-}
-
-.pi-buttons-wrapper {
-  display: flex;
-  // justify-content: space-between;
   align-items: center;
-  align-self: stretch;
-  height: 56px;
-  width: 440px;
-  // padding: 16px;
+  width: 444px;
   border-radius: 86px;
   border: 1px solid var(--Button-Primary-BG, #0f61ff);
-  opacity: 0.4;
+  text-align: center;
 }
-.btn-change-amount {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  width: 40px;
-  height: 40px;
+
+.pi__quantity-value,
+.pi__quantity button {
   background: transparent;
   border: none;
   padding: 8px;
 }
 
-.btn-change-amount:hover {
-  cursor: pointer;
+.pi__quantity-btn svg {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1;
+  padding: 8px;
 }
 
-.pi-buttons-wrapper button > svg {
-  width: 24px;
-  height: 24px;
-}
-
-.quantity {
-  overflow: hidden;
+.pi__quantity-value {
   flex-grow: 1;
+  justify-self: center;
   color: var(--Button-Primary-BG, #0f61ff);
   text-align: center;
   text-overflow: ellipsis;
-  font-family: var(--Body-font-family, "be vietnam pro");
+  font-family: var(--Body-font-family, "Be Vietnam Pro");
   font-size: var(--Body-font-size-body-Md, 16px);
   font-style: normal;
   font-weight: 400;
@@ -258,13 +278,20 @@
   letter-spacing: -0.16px;
 }
 
-.btn-change-amount svg {
-  color: #0f61ff;
-  opacity: 1.5;
+.pi__quantity-btn:hover {
+  cursor: pointer;
 }
 
-.btn__buy-now,
-.btn__add-to-cart {
+.pi__quantity-btn--decrease {
+  opacity: 0.4;
+}
+
+.pi__buttons {
+  display: flex;
+  gap: 8px;
+}
+.btn--buy-now,
+.btn--add-to-cart {
   padding: 16px 20px;
   text-align: center;
   font-family: "Poppins";
@@ -276,58 +303,71 @@
   border: 1px solid var(--Button-Primary-BG, #0f61ff);
 }
 
-.btn__buy-now {
+.btn--buy-now {
   color: var(--Button-Primary-Label, #fff);
   border-radius: 100px;
   background: var(--Button-Primary-BG, #0f61ff);
   width: 304px;
 }
 
-.btn__add-to-cart {
+.btn--add-to-cart {
   color: var(--Button-Primary-BG, #0f61ff);
   border-radius: 100px;
   background: white;
 }
 
-.accordion,
-.accordion__item,
-.accordion__header {
-  width: 100%;
+.accordion {
+  border-top: 1px solid #e3e5e8;
 }
 
 .accordion__item {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding: 16px;
+  border-bottom: 1px solid #e3e5e8;
 }
 
 .accordion__header {
   width: 100%;
+  background: none;
+  border: none;
   display: flex;
   justify-content: space-between;
-  text-align: center;
-  background: none;
-  cursor: pointer;
-  border: none;
   align-items: center;
-}
-
-.accordion__title {
-  color: var(--Text, #1e1e1e);
-  font-family: Poppins;
+  padding: 16px 0;
+  cursor: pointer;
   font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 140%; /* 22.4px */
-  letter-spacing: -0.16px;
+  font-weight: 600;
+  color: #1e232b;
 }
 
-.accordion-list {
+.accordion__icon {
+  font-size: 18px;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.accordion__content {
+  display: none;
+  padding-bottom: 12px;
+  font-size: 14px;
+  color: #4a4a4a;
+}
+
+.accordion__list li {
   list-style-type: disc;
-  // padding-left: 20px;
 }
 
-.accordion-list__item {
-  display: list-item;
+.accordion__item.active .accordion__content {
+  display: block;
+}
+
+.accordion__item.active .accordion__icon {
+  transform: rotate(180deg);
+}
+
+.accordion__text {
+  color: var(--Text, #1e1e1e);
+  font-family: var(--Body-font-family, "Be Vietnam Pro");
+  font-size: var(--Body-font-size-body-Sm, 15px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 142%;
 }

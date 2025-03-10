@@ -19,9 +19,9 @@
 
 .cl-card__title {
   position: absolute;
-  top: 33px;
-  left: 42px;
+  inset: 0;
   min-height: 104px;
+  padding: 42px 33px;
 }
 
 .cl-card__title h2 {
@@ -32,8 +32,7 @@
   font-weight: 600;
   line-height: 120%; /* 37.2px */
   letter-spacing: -0.93px;
-  top: 33px;
-  left: 42px;
+  padding-bottom: 21px;
 }
 
 .cl-card__title a {

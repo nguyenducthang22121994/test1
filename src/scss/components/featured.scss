@@ -1,19 +1,24 @@
 .featured {
   background-image: url("../../public/assets/featured/image\ 283.png");
+  background-position: top;
+  aspect-ratio: 1920px/943px;
+  background-size: cover;
 }
 
 .featured-container {
+  height: 100%;
+}
+
+.future {
   padding: 68px 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 47.72%;
-  height: 100%;
+  min-height: 100%;
 }
-
 .featured__title {
   max-width: 523px;
-  max-height: 165px;
+  // max-height: 165px;
   color: #fff;
   font-family: "be vietnam pro";
   font-size: 60px;
@@ -31,7 +36,7 @@
 .f-card__inner {
   display: flex;
   padding: 18px;
-  height: 100%;
+  height: fit-content;
   background-color: #fff;
   border-radius: 20px;
 }
@@ -41,23 +46,30 @@
   padding: 0 16px;
 }
 
-.f-card__image-wrapper img {
+.f-card__image img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: center;
 }
 
 .f-card__content {
+  width: fit-content;
+  height: fit-content;
   padding: 0 3px;
 }
 
 .f-card__content {
   max-width: 285px;
-  height: 100%;
+  // height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-
+.f-card__details {
+  // width: fit-content;
+  height: fit-content;
+}
 .f-card__title {
   font-family: "be vietnam pro";
   font-size: 20px;
@@ -94,19 +106,22 @@
 .f-card__button {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
+  justify-items: center;
+  width: 40px;
+  height: 40px;
   background-color: rgba(15, 97, 255, 1);
   border-radius: 6px;
   align-self: flex-end;
 }
 
 .f-card__button a {
-  padding: 14px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
 }
 
-@media (max-width: 572px) {
+@media (max-width: 992px) {
   .featured-container {
     display: block;
     max-width: 331px;
@@ -116,17 +131,19 @@
 
   .featured__title {
     width: 100%;
-    height: 100%;
     font-size: 40px;
     font-style: normal;
     font-weight: 600;
     line-height: 98%; /* 39.2px */
     letter-spacing: -2px;
     white-space: wrap;
+    padding-bottom: 67px;
   }
+
   .featured {
-    aspect-ratio: 572/884;
+    aspect-ratio: 572/1025;
   }
+
   .f-card {
     align-self: self-end;
     max-width: 100%;
@@ -138,11 +155,16 @@
     height: 100%;
     float: right;
   }
-  .f-card__image-wrapper {
+  .f-card__image {
+    max-width: 164px;
     overflow: hidden;
     padding: 13 40px;
   }
   .f-card__button {
+    float: right;
+  }
+  .f-card__button a > svg {
+    overflow: hidden;
     float: right;
   }
 }
