@@ -7,12 +7,12 @@
 
 .pi-cont__imgs {
   flex: 57.6%;
-  //   background-color: lightgray; /* Chỉ để hiển thị rõ layout */
+  //   background-color: lightgray;
 }
 
 .pi-cont__info {
   flex: 42.4%;
-  background-color: lightblue; /* Chỉ để hiển thị rõ layout */
+  // background-color: lightblue;
 }
 
 .pi-cont__imgs,
@@ -88,6 +88,8 @@
 
 .pi-main__price {
   display: flex;
+  align-items: center;
+
   gap: 4px;
 }
 
@@ -99,6 +101,7 @@
   font-weight: 500;
   line-height: 105%;
   letter-spacing: -0.2px;
+  overflow: hidden;
 }
 
 .pi-main__price-value--old {
@@ -129,8 +132,202 @@
   gap: 6px;
 }
 
-.device-select__option select {
+.pi-options__wrapper {
+  display: flex;
+  gap: 6px;
+}
+
+.pi-options__select {
+  width: 175px;
+}
+
+.pi-options__dropdown {
+  width: 100%;
   padding: 16px 14px;
   border-radius: 12px;
   border: 1px solid var(--Others-Line-1, #e3e5e8);
+}
+
+.pi-options__dropdown option {
+  color: var(--Primary-Accent-1, #1e232b);
+  font-family: "Poppins";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 142%; /* 21.3px */
+}
+
+.pi-options__label {
+  color: var(--Text, #1e1e1e);
+  font-family: "Poppins";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  opacity: 0.5;
+}
+
+.pi-options__colors {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+.pi-options__color {
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+}
+
+.pi-options__color svg {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+.pi-options__color:hover {
+  cursor: pointer;
+}
+
+.pi-options__color--active {
+  border-radius: 50%;
+  border: 1px solid rgba(15, 97, 255, 1);
+}
+
+.pi-options__color--disable {
+  border: none;
+}
+
+.pi-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pi-buttons__group {
+  display: flex;
+  width: 444px;
+  gap: 8px;
+}
+
+.pi-buttons-wrapper {
+  display: flex;
+  // justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  height: 56px;
+  width: 440px;
+  // padding: 16px;
+  border-radius: 86px;
+  border: 1px solid var(--Button-Primary-BG, #0f61ff);
+  opacity: 0.4;
+}
+.btn-change-amount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  padding: 8px;
+}
+
+.btn-change-amount:hover {
+  cursor: pointer;
+}
+
+.pi-buttons-wrapper button > svg {
+  width: 24px;
+  height: 24px;
+}
+
+.quantity {
+  overflow: hidden;
+  flex-grow: 1;
+  color: var(--Button-Primary-BG, #0f61ff);
+  text-align: center;
+  text-overflow: ellipsis;
+  font-family: var(--Body-font-family, "be vietnam pro");
+  font-size: var(--Body-font-size-body-Md, 16px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 145%; /* 23.2px */
+  letter-spacing: -0.16px;
+}
+
+.btn-change-amount svg {
+  color: #0f61ff;
+  opacity: 1.5;
+}
+
+.btn__buy-now,
+.btn__add-to-cart {
+  padding: 16px 20px;
+  text-align: center;
+  font-family: "Poppins";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 22.4px */
+  letter-spacing: -0.16px;
+  border: 1px solid var(--Button-Primary-BG, #0f61ff);
+}
+
+.btn__buy-now {
+  color: var(--Button-Primary-Label, #fff);
+  border-radius: 100px;
+  background: var(--Button-Primary-BG, #0f61ff);
+  width: 304px;
+}
+
+.btn__add-to-cart {
+  color: var(--Button-Primary-BG, #0f61ff);
+  border-radius: 100px;
+  background: white;
+}
+
+.accordion,
+.accordion__item,
+.accordion__header {
+  width: 100%;
+}
+
+.accordion__item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+}
+
+.accordion__header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  background: none;
+  cursor: pointer;
+  border: none;
+  align-items: center;
+}
+
+.accordion__title {
+  color: var(--Text, #1e1e1e);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 22.4px */
+  letter-spacing: -0.16px;
+}
+
+.accordion-list {
+  list-style-type: disc;
+  // padding-left: 20px;
+}
+
+.accordion-list__item {
+  display: list-item;
 }
