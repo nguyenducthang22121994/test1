@@ -17,6 +17,10 @@
   padding: 0 32px;
 }
 
+.header-logo img {
+  mix-blend-mode: difference;
+}
+
 .nav {
   display: flex;
   overflow: hidden;

@@ -1,0 +1,136 @@
+.pi-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 55px 0 64px 0;
+}
+
+.pi-cont__imgs {
+  flex: 57.6%;
+  //   background-color: lightgray; /* Chỉ để hiển thị rõ layout */
+}
+
+.pi-cont__info {
+  flex: 42.4%;
+  background-color: lightblue; /* Chỉ để hiển thị rõ layout */
+}
+
+.pi-cont__imgs,
+.pi-cont__img,
+.pi-cont__thumbnails,
+.pi-cont__info {
+  width: 100%;
+  height: 100%;
+}
+
+.pi-thumbnails {
+  display: flex;
+  gap: 12px;
+}
+
+.pi-thumnail {
+  width: 107px;
+  height: 107px;
+  border-radius: 10px;
+  background: #d9d9d9;
+}
+
+.pi-thumnail:hover {
+  cursor: pointer;
+}
+
+.pi-wrapper {
+  width: 100%;
+  height: 100%;
+  padding: 80px 0 72px 80px;
+}
+
+.pi-main {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.pi-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.pi-main__subtitle {
+  font-family: Poppins;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 142%;
+  opacity: 0.5;
+}
+
+.pi-main__title {
+  font-family: var(--Heading-font-family, "be vietnam pro");
+  font-size: var(--Heading-font-size-H4, 50px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 104%; /* 52px */
+  letter-spacing: -2.5px;
+}
+
+.pi-main__desc {
+  max-width: 473px;
+  color: var(--Text, #1e1e1e);
+  font-family: var(--Body-font-family, "be vietnam pro");
+  font-size: var(--Body-font-size-body-Sm, 15px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 142%;
+  opacity: 0.7;
+}
+
+.pi-main__price {
+  display: flex;
+  gap: 4px;
+}
+
+.pi-main__price-value--new {
+  color: var(--Text, #1e1e1e);
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: bold;
+  font-weight: 500;
+  line-height: 105%;
+  letter-spacing: -0.2px;
+}
+
+.pi-main__price-value--old {
+  color: var(--Text, #1e1e1e);
+  font-family: "Be Vietnam Pro";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+  opacity: 0.6;
+  text-decoration: line-through;
+  color: gray;
+  opacity: 0.7;
+}
+
+.pi-select label {
+  color: var(--Text, #1e1e1e);
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  opacity: 0.5;
+}
+
+.device-select__options {
+  display: flex;
+  gap: 6px;
+}
+
+.device-select__option select {
+  padding: 16px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--Others-Line-1, #e3e5e8);
+}

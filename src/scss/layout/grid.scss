@@ -41,9 +41,9 @@
   padding-bottom: calc($grid-container-gap);
 }
 
-.row:last-child .col {
-  padding-bottom: 0;
-}
+// .row:last-child .col {
+//   padding-bottom: 0;
+// }
 
 @media (max-width: 572px) {
   .col {
