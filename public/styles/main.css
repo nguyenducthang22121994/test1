@@ -198,7 +198,7 @@ a:hover {
   background-color: var(--color);
 }
 
-.bg-color--1 {
+.bg-color {
   background-color: #f6f6f6;
 }
 
@@ -1196,11 +1196,13 @@ footer {
 .product-hero__title {
   text-align: start;
   width: 100%;
-  height: auto;
+  height: 100%;
+  position: relative;
 }
 
 .product-hero__title h1 {
   position: absolute;
+  inset: 0;
   width: 100%;
   bottom: 0;
   color: #fff;
@@ -1212,6 +1214,7 @@ footer {
   letter-spacing: clamp(-1px, -1vw, -6px);
   letter-spacing: -6px;
   padding: 64px 164px;
+  align-self: flex-end;
 }
 
 @media (max-width: 576px) {
@@ -1291,8 +1294,11 @@ footer {
   width: 100%;
   padding: 15px 0;
   border-radius: 8px;
-  border: 1px solid #848484;
   background: #f7f7f8;
+}
+
+.cate__item--active {
+  border: 1px solid #848484;
 }
 
 .cate__item img {
@@ -1539,11 +1545,15 @@ footer {
   }
 }
 .frame,
-.frame-wrapper,
 .frame__content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
+}
+
+.frame-wrapper {
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -1560,6 +1570,8 @@ footer {
 
 .frame__title {
   color: var(--Text, #000);
+  padding-top: 11px;
+  padding-bottom: 6px;
   text-align: center;
   font-family: var(--Body-font-family, "be vietnam pro");
   font-size: var(--Body-font-size-body-Md, 16px);
@@ -2492,6 +2504,10 @@ select option {
   display: flex;
   flex-direction: column;
   gap: 36px;
+}
+
+.faq__body {
+  width: 100%;
 }
 
 .faq__tittle {
