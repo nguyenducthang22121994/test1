@@ -864,6 +864,9 @@ select option {
   flex-direction: column;
   gap: 36px;
 }
+.faq__body {
+  width: 100%;
+}
 .faq__tittle {
   text-align: center;
   color: var(--Text, #1e1e1e);
