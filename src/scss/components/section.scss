@@ -8,10 +8,15 @@
   background-size: cover;
   background-position: center;
   width: 100vw;
-  max-height: 100vh;
+  // max-height: 100vh;
+  // height: auto;
   aspect-ratio: 16/9;
-  flex-shrink: 1;
+  flex-shrink: 0;
   position: relative;
+}
+
+.page-section--color {
+  background-color: var(--color);
 }
 
 .bg-color--1 {
