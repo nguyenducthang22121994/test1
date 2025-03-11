@@ -349,6 +349,31 @@ select option {
   color: #4a4a4a;
 }
 
+.accordion__title {
+  color: var(--Text, #1e1e1e);
+  font-feature-settings: "ss01" on;
+
+  /* Body/Strong/M */
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 22.4px */
+  letter-spacing: -0.16px;
+}
+
+.accordion__text {
+  color: var(--Text, #1e1e1e);
+  font-feature-settings: "ss01" on;
+  /* Body/Subtle/S */
+  font-family: var(--Body-font-family, "Be Vietnam Pro");
+  font-size: var(--Body-font-size-body-Sm, 15px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 142%; /* 21.3px */
+  opacity: 0.7;
+}
+
 .accordion__list li {
   list-style-type: disc;
 }
