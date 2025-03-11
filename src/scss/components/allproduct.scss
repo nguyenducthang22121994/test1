@@ -4,6 +4,9 @@
 .product-hero {
   background-image: url("../../public/assets/product-page/hero/Change-IMG.png");
   aspect-ratio: 1920/512;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .product-hero__title {
