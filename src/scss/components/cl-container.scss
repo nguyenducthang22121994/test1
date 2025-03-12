@@ -3,12 +3,12 @@
 }
 
 .cl-card__img {
-  width: 100%;
+  // width: 100%;
 }
 
 .cl-card__img img {
   width: 100%;
-  height: 100%;
+  // height: 100%;
 }
 
 .cl-card {
@@ -45,9 +45,15 @@
     max-width: 332px;
     height: auto;
     margin: auto;
-    // display: block;
   }
+
   .cl-card__img img {
-    padding-bottom: 15px;
+    aspect-ratio: calc(299px / 354px);
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .btn-sa--hidden {
+    display: none;
   }
 }

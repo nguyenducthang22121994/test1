@@ -133,6 +133,12 @@
           <div class="pi">
             <div class="pi__gallery">
               <div class="pi__gallery-main">
+                <div
+                  class="pi__zoom"
+                  style="
+                    background-image: url('./public/assets/product-detail/product_img1.png');
+                  "
+                ></div>
                 <img
                   src="./public/assets/product-detail/product_img1.png"
                   alt="main image"
@@ -1111,7 +1117,11 @@
                   <div class="product-card">
                     <div class="product-card__img">
                       <a href="productdetail.html"
-                        ><img src="public/assets/products/product1.png" alt=""
+                        ><img
+                          src="public/assets/products/product1.png"
+                          alt="" /><img
+                          src="public/assets/products/product2.png"
+                          alt=""
                       /></a>
                     </div>
                     <div class="product-info">
@@ -1143,7 +1153,13 @@
                 <div class="col" style="--col-lg: 3; --col-md: 6">
                   <div class="product-card">
                     <div class="product-card__img">
-                      <img src="public/assets/products/product1.png" alt="" />
+                      <a href="productdetail.html"
+                        ><img
+                          src="public/assets/products/product1.png"
+                          alt="" /><img
+                          src="public/assets/products/product2.png"
+                          alt=""
+                      /></a>
                     </div>
                     <div class="product-info">
                       <div class="product-info__name">
@@ -1174,7 +1190,13 @@
                 <div class="col" style="--col-lg: 3; --col-md: 6">
                   <div class="product-card">
                     <div class="product-card__img">
-                      <img src="public/assets/products/product1.png" alt="" />
+                      <a href="productdetail.html"
+                        ><img
+                          src="public/assets/products/product1.png"
+                          alt="" /><img
+                          src="public/assets/products/product2.png"
+                          alt=""
+                      /></a>
                     </div>
                     <div class="product-info">
                       <div class="product-info__name">
@@ -1205,7 +1227,13 @@
                 <div class="col" style="--col-lg: 3; --col-md: 6">
                   <div class="product-card">
                     <div class="product-card__img">
-                      <img src="public/assets/products/product1.png" alt="" />
+                      <a href="productdetail.html"
+                        ><img
+                          src="public/assets/products/product1.png"
+                          alt="" /><img
+                          src="public/assets/products/product2.png"
+                          alt=""
+                      /></a>
                     </div>
                     <div class="product-info">
                       <div class="product-info__name">
@@ -1399,22 +1427,43 @@
       document.querySelectorAll(".accordion__header").forEach((header) => {
         header.addEventListener("click", function () {
           const item = this.parentElement;
+          const content = item.querySelector(".accordion__content");
           const isActive = item.classList.contains("active");
 
-          // Đóng tất cả các accordion khác
           document.querySelectorAll(".accordion__item").forEach((el) => {
-            el.classList.remove("active");
-            el.querySelector(".icon-plus").style.display = "block";
-            el.querySelector(".icon-minus").style.display = "none";
+            if (el !== item) {
+              el.classList.remove("active");
+              el.querySelector(".accordion__content").style.height = "0px";
+            }
           });
 
-          // Nếu item chưa mở thì mở nó ra
           if (!isActive) {
             item.classList.add("active");
-            this.querySelector(".icon-plus").style.display = "none";
-            this.querySelector(".icon-minus").style.display = "block";
+            content.style.height = content.scrollHeight + "px";
+          } else {
+            item.classList.remove("active");
+            content.style.height = "0px";
           }
         });
+      });
+
+      const zoomArea = document.querySelector(".pi__zoom");
+      const imgContainer = document.querySelector(".pi__gallery-main");
+
+      imgContainer.addEventListener("mousemove", (e) => {
+        const { left, top, width, height } =
+          imgContainer.getBoundingClientRect();
+        const x = ((e.clientX - left) / width) * 100;
+        const y = ((e.clientY - top) / height) * 100;
+        zoomArea.style.backgroundPosition = `${x}% ${y}%`;
+      });
+
+      imgContainer.addEventListener("mouseleave", () => {
+        zoomArea.style.display = "none";
+      });
+
+      imgContainer.addEventListener("mouseenter", () => {
+        zoomArea.style.display = "block";
       });
     </script>
   </body>

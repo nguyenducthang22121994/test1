@@ -35,6 +35,31 @@
   height: auto;
   aspect-ratio: 1;
 }
+
+.pi__gallery-main {
+  position: relative;
+  overflow: hidden;
+}
+
+.pi__zoom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: 250%;
+  background-position: center;
+  display: none;
+}
+
+.pi__gallery-main:hover .pi__zoom {
+  display: block;
+}
+
+.pi__gallery-main:hover .pi__gallery-main-img {
+  opacity: 0;
+}
+
 .pi__gallery-thumbnails {
   display: flex;
   gap: 12px;
@@ -46,10 +71,12 @@
   height: 107px;
   border-radius: 10px;
   background: #d9d9d9;
+  transition: all 0.5s ease;
 }
 
 .pi__gallery-thumbnail:hover {
   cursor: pointer;
+  transform: scale(0.8);
 }
 
 .pi__info {
@@ -218,6 +245,11 @@ select option {
   width: 100%;
   height: 100%;
   background-color: white;
+  transition: all 0.5s ease;
+}
+
+.pi__color svg:hover {
+  transform: scale(0.8);
 }
 
 .pi__color:hover {
@@ -314,6 +346,30 @@ select option {
   background: white;
 }
 
+.pi__buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.btn--buy-now,
+.btn--add-to-cart {
+  position: relative;
+  border: 1px solid var(--Button-Primary-BG, #0f61ff);
+  border-radius: 100px;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.btn--buy-now:hover {
+  background: green;
+}
+
+.btn--add-to-cart:hover {
+  background: #fff;
+  color: green;
+  border: 1px solid green;
+  transform: scale(0.9);
+}
+
 .accordion {
   border-top: 1px solid #e3e5e8;
 }
@@ -347,6 +403,17 @@ select option {
   padding-bottom: 12px;
   font-size: 14px;
   color: #4a4a4a;
+}
+
+.accordion__content {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: height 0.4s ease-out, opacity 0.3s ease-out;
+}
+
+.accordion__item.active .accordion__content {
+  opacity: 1;
 }
 
 .accordion__title {
@@ -1028,10 +1095,10 @@ select option {
 // }
 
 .btn-sa--relative a {
-  color: var(--Button-Primary-BG, #0f61ff);
+  color: #0f61ff;
   text-align: center;
-  font-family: var(--Body-font-family, "Be Vietnam Pro");
-  font-size: var(--Body-font-size-body-xS, 14px);
+  font-family: "Be Vietnam Pro";
+  font-size: 14px;
   font-style: normal;
   font-weight: 600;
   line-height: 140%;
@@ -1040,6 +1107,55 @@ select option {
   opacity: 1;
   border-radius: 100px;
   border: 1px solid rgba(15, 97, 255, 0.4);
+}
+
+.btn-sa--relative a {
+  position: relative;
+  overflow: hidden;
+  transition: color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+}
+
+.btn-sa--relative a {
+  position: relative;
+  display: inline-block;
+  color: #0f61ff;
+  text-align: center;
+  font-family: "Be Vietnam Pro";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  padding: 10px 32.5px;
+  background-color: #fff;
+  opacity: 1;
+  border-radius: 100px;
+  border: 1px solid rgba(15, 97, 255, 0.4);
+  text-decoration: none;
+  transition: color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-sa--relative a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #0f61ff, #0053cc);
+  transition: left 0.4s ease-in-out;
+  z-index: -1;
+  border-radius: 100px;
+}
+
+.btn-sa--relative a:hover {
+  color: #fff;
+  border-color: #0f61ff;
+}
+
+.btn-sa--relative a:hover::before {
+  left: 0;
 }
 
 .recommend__paginations {

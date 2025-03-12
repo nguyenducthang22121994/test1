@@ -39,7 +39,14 @@
   overflow: hidden;
 }
 
-.multi-card__text {
+.multi-card .multi-card__img {
+  transition: transform 0.5s ease-in-out;
+}
+
+.multi-card .multi-card__img:hover {
+  transform: scale(1.3);
+}
+.multi-card .multi-card__text {
   display: flex;
   flex-direction: column;
   gap: 450px;

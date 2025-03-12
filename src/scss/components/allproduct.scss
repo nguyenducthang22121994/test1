@@ -116,8 +116,14 @@
   width: 100%;
   padding: 15px 0;
   border-radius: 8px;
-
   background: #f7f7f8;
+  transition: transform 0.3s ease-in-out;
+}
+
+.cate__item:hover {
+  .cate__image {
+    transform: scale(1.2);
+  }
 }
 
 .cate__item--active {
@@ -160,6 +166,25 @@
   border-radius: 50%;
 }
 
+@keyframes moveArrow {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.cate__button:hover svg path {
+  animation: moveArrow 0.5s infinite ease-in-out;
+}
+.previous-button:hover,
+.item:hover {
+  cursor: pointer;
+}
 @media (max-width: 576px) {
   .category {
     display: none;
